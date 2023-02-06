@@ -1,6 +1,8 @@
 # Uniswap V3 Built From Scratch
 
-A Uniswap V3 clone built from scratch for educational purposes. Part of free and open-source [Uniswap V3 Development Book](https://uniswapv3book.com).
+This repo implements the Uniswap V3's ranged based liquidity provision and swapping with better capital efficiency with slippage control in a given price range.
+
+It also implements the multi-pool swap allowing swapping of token pairs even if an explicit pool doesn't exist.
 
 ![Front-end application screenshot](/screenshot.png)
 
@@ -15,11 +17,15 @@ A Uniswap V3 clone built from scratch for educational purposes. Part of free and
     $ source .envrc
     $ make deploy
     ```
+1. Install the Frontend Dependencies:
+    ```shell
+    $ cd ui && yarn install
+    ```
 1. Start the UI:
     ```shell
-    $ cd ui && yarn start
+    $ yarn start
     ```
-1. In Metamask, import this private key and connect to `localhost:8545`:
+1. In Metamask, import this private key and add network `localhost:8545` with chain ID 31337:
     ```
     0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
     ```
